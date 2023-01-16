@@ -1,16 +1,13 @@
-from random import randrange
 import prompt
-# from brain_games.cli import *
+import importlib
 
 
-def play_round_even():
-    number = randrange(1, 100)
-    print(f'Question: {number}')
+def play_round(game_name):
+    module = importlib.import_module(game_name)
+
+    question, correct_answer = module.get_task()
+    print(f'Question: {question}')
     answer = prompt.string('Your answer: ')
-
-    correct_answer = 'no'
-    if number % 2 == 0:
-        correct_answer = 'yes'
 
     if correct_answer == answer:
         print('Correct!')
@@ -21,14 +18,16 @@ def play_round_even():
         return False
 
 
-def play_game_even():
+def play_game(game_name):
+    module = importlib.import_module(game_name)
+
     print("Welcome to the Brain Games!")
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
 
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+    print(module.game_rule)
     for i in range(3):
-        if not play_round_even():
+        if not play_round(game_name):
             print(f"Let's try again, {name}!")
             break
     else:
