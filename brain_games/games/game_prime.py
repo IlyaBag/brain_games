@@ -2,7 +2,7 @@ from random import randrange
 from math import sqrt
 
 
-game_rule = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+GAME_RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def get_task():

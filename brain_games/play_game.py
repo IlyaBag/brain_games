@@ -25,7 +25,7 @@ def play_game(game_name):
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
 
-    print(module.game_rule)
+    print(module.GAME_RULE)
     for i in range(3):
         if not play_round(game_name):
             print(f"Let's try again, {name}!")

@@ -1,7 +1,7 @@
 from random import randrange
 
 
-game_rule = 'What number is missing in the progression?'
+GAME_RULE = 'What number is missing in the progression?'
 
 
 def get_task():

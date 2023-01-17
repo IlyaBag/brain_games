@@ -1,7 +1,7 @@
 from random import randrange
 
 
-game_rule = 'Find the greatest common divisor of given numbers.'
+GAME_RULE = 'Find the greatest common divisor of given numbers.'
 
 
 def get_task():

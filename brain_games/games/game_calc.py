@@ -1,7 +1,7 @@
 from random import randrange
 
 
-game_rule = 'What is the result of the expression?'
+GAME_RULE = 'What is the result of the expression?'
 
 
 def get_task():
