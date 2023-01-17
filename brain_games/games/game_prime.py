@@ -12,9 +12,9 @@ def get_task():
 
     result = 'yes'
     if number > 2:
-      for divisor in range(2, int(sqrt(number)) + 1):
-          if number % divisor == 0:
-              result = 'no'
-              break
+        for divisor in range(2, int(sqrt(number)) + 1):
+            if number % divisor == 0:
+                result = 'no'
+                break
 
     return task, result

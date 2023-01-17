@@ -6,7 +6,7 @@ game_rule = 'What number is missing in the progression?'
 
 def get_task():
     start = randrange(1, 51)
-    com_dif = randrange(1, 6) # common difference
+    com_dif = randrange(1, 6)  # common difference
     seq_length = randrange(5, 15)
     hidden_index = randrange(1, seq_length - 1)
     sequence = [start]
