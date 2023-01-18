@@ -7,8 +7,8 @@ repository = "https://github.com/IlyaBag/python-project-49"
 readme = "README.md"
 classifiers = [
     "Environment :: Console",
-    "Operating System :: POSIX :: Linux"
-    "Programming Language :: Python"
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python",
     "Topic :: Games/Entertainment"
 ]
 packages = [{include = "brain_games"}]
