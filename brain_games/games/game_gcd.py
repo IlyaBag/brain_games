@@ -2,11 +2,13 @@ from random import randrange
 
 
 GAME_RULE = 'Find the greatest common divisor of given numbers.'
+RANGE_MIN = 1
+RANGE_MAX = 100
 
 
 def get_task():
-    number1 = randrange(1, 100)
-    number2 = randrange(1, 100)
+    number1 = randrange(RANGE_MIN, RANGE_MAX)
+    number2 = randrange(RANGE_MIN, RANGE_MAX)
 
     task = f'{number1} {number2}'
 
