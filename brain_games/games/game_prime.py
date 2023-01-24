@@ -12,11 +12,16 @@ def get_task():
 
     task = f'{number}'
 
-    result = 'yes'
-    if number > 2:
-        for divisor in range(2, int(sqrt(number)) + 1):
-            if number % divisor == 0:
-                result = 'no'
-                break
+    if number == 2:
+        result = 'yes'
+        return task, result
+
+    number_check_range = int(sqrt(number)) + 1
+    for divisor in range(2, number_check_range):
+        if number % divisor == 0:
+            result = 'no'
+            break
+    else:
+       result = 'yes' 
 
     return task, result
