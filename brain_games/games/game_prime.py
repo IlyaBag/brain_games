@@ -22,6 +22,6 @@ def get_task():
             result = 'no'
             break
     else:
-       result = 'yes' 
+        result = 'yes'
 
     return task, result
