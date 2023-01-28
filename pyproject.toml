@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hexlet-code"
-version = "1.3.1"
+version = "1.3.2"
 authors = ["Ilya Bagrov <ilya.b.only@gmail.com>"]
 description = "Brain Games Collection"
 repository = "https://github.com/IlyaBag/python-project-49"

@@ -1,8 +1,8 @@
 import prompt
 
 
-def play_round(game_name):
-    question, correct_answer = game_name.get_task()
+def play_round(game_module):
+    question, correct_answer = game_module.get_task()
     print(f'Question: {question}')
     answer = prompt.string('Your answer: ')
 
@@ -15,14 +15,14 @@ def play_round(game_name):
         return False
 
 
-def play_game(game_name):
+def play_game(game_module):
     print("Welcome to the Brain Games!")
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
 
-    print(game_name.GAME_RULE)
+    print(game_module.GAME_RULE)
     for i in range(3):
-        if not play_round(game_name):
+        if not play_round(game_module):
             print(f"Let's try again, {name}!")
             break
     else:
