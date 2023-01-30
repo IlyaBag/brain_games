@@ -7,21 +7,26 @@ RANGE_MIN = 2
 RANGE_MAX = 110
 
 
+def is_prime(num):
+    if num == 2:
+        return True
+
+    number_check_range = int(sqrt(num)) + 1
+    for divisor in range(2, number_check_range):
+        if num % divisor == 0:
+            return False
+    else:
+        return True
+
+
 def get_task():
     number = randrange(RANGE_MIN, RANGE_MAX)
 
     task = f'{number}'
 
-    if number == 2:
-        result = 'yes'
-        return task, result
-
-    number_check_range = int(sqrt(number)) + 1
-    for divisor in range(2, number_check_range):
-        if number % divisor == 0:
-            result = 'no'
-            break
+    if is_prime(number):
+        correct_answer = 'yes'
     else:
-        result = 'yes'
+        correct_answer = 'no'
 
-    return task, result
+    return task, correct_answer
