@@ -6,11 +6,16 @@ RANGE_MIN = 1
 RANGE_MAX = 100
 
 
+def is_even(num):
+    return num % 2 == 0
+
+
 def get_task():
     number = randrange(RANGE_MIN, RANGE_MAX)
 
-    result = 'no'
-    if number % 2 == 0:
-        result = 'yes'
+    if is_even(number):
+        correct_answer = 'yes'
+    else:
+        correct_answer = 'no'
 
-    return number, result
+    return number, correct_answer
